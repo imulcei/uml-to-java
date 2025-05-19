@@ -1,18 +1,22 @@
 package fr.afpa.model;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Film {
     private String titre;
-    private Date dateSortie;
+    private int dateSortie;
     private List<Acteur> acteurs = new ArrayList<Acteur>();
 
-    public Film(String nom, Date dateSortie, List<Acteur> acteurs) {
+    public Film(String nom, int dateSortie, List<Acteur> acteurs) {
         this.titre = nom;
         this.dateSortie = dateSortie;
         this.acteurs = acteurs;
+    }
+
+    @Override
+    public String toString() {
+        return "Film [titre=" + titre + "]";
     }
 
     public String getTitre() {
@@ -23,11 +27,11 @@ public class Film {
         this.titre = nom;
     }
 
-    public Date getDateSortie() {
+    public int getDateSortie() {
         return dateSortie;
     }
 
-    public void setDateSortie(Date dateSortie) {
+    public void setDateSortie(int dateSortie) {
         this.dateSortie = dateSortie;
     }
 
