@@ -5,17 +5,22 @@ import java.util.Date;
 import java.util.List;
 
 public class Film {
-    private String nom;
+    private String titre;
     private Date dateSortie;
-    private List<PlaylistFilms> _playlistFilms = new ArrayList<PlaylistFilms>();
-    private List<Acteur> _acteurs = new ArrayList<Acteur>();
+    private List<Acteur> acteurs = new ArrayList<Acteur>();
 
-    public String getNom() {
-        return nom;
+    public Film(String nom, Date dateSortie, List<Acteur> acteurs) {
+        this.titre = nom;
+        this.dateSortie = dateSortie;
+        this.acteurs = acteurs;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String nom) {
+        this.titre = nom;
     }
 
     public Date getDateSortie() {
@@ -26,20 +31,12 @@ public class Film {
         this.dateSortie = dateSortie;
     }
 
-    public List<PlaylistFilms> get_playlistFilms() {
-        return _playlistFilms;
+    public List<Acteur> getActeurs() {
+        return acteurs;
     }
 
-    public void set_playlistFilms(List<PlaylistFilms> _playlistFilms) {
-        this._playlistFilms = _playlistFilms;
-    }
-
-    public List<Acteur> get_acteurs() {
-        return _acteurs;
-    }
-
-    public void set_acteurs(List<Acteur> _acteurs) {
-        this._acteurs = _acteurs;
+    public void setActeurs(List<Acteur> acteurs) {
+        this.acteurs = acteurs;
     }
 
 }

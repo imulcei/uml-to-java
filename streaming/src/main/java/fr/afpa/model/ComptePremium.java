@@ -5,31 +5,31 @@ import java.util.List;
 
 public class ComptePremium extends CompteUtilisateur {
     private String[] infoPaiement;
-    private List<PlaylistFilms> _playlistFilms = new ArrayList<PlaylistFilms>();
-    private Famille _famille;
+    private List<PlaylistFilms> playlistFilms = new ArrayList<PlaylistFilms>();
+    private Famille famille;
+
+    public ComptePremium(String nom, Long numeroCompte, String[] infoPaiement, List<PlaylistFilms> playlistFilms,
+            Famille famille) {
+        super(nom, numeroCompte);
+        this.infoPaiement = infoPaiement;
+        this.playlistFilms = playlistFilms;
+        this.famille = famille;
+    }
 
     public String[] getInfoPaiement() {
         return infoPaiement;
     }
 
-    public void setInfoPaiement(String[] infoPaiement) {
-        this.infoPaiement = infoPaiement;
+    public List<PlaylistFilms> getPlaylistFilms() {
+        return playlistFilms;
     }
 
-    public List<PlaylistFilms> get_playlistFilms() {
-        return _playlistFilms;
+    public Famille getFamille() {
+        return famille;
     }
 
-    public void set_playlistFilms(List<PlaylistFilms> _playlistFilms) {
-        this._playlistFilms = _playlistFilms;
-    }
-
-    public Famille get_famille() {
-        return _famille;
-    }
-
-    public void set_famille(Famille _famille) {
-        this._famille = _famille;
+    public void setFamille(Famille famille) {
+        this.famille = famille;
     }
 
 }

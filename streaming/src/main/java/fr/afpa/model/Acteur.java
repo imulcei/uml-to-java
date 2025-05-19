@@ -6,7 +6,13 @@ import java.util.List;
 public class Acteur {
     private String nom;
     private String prenom;
-    private List<Film> _films = new ArrayList<Film>();
+    private List<Film> films = new ArrayList<Film>();
+
+    public Acteur(String nom, String prenom, List<Film> films) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.films = films;
+    }
 
     public String getNom() {
         return nom;
@@ -24,12 +30,12 @@ public class Acteur {
         this.prenom = prenom;
     }
 
-    public List<Film> get_films() {
-        return _films;
+    public List<Film> getFilms() {
+        return films;
     }
 
-    public void set_films(List<Film> _films) {
-        this._films = _films;
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 
 }

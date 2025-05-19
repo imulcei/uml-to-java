@@ -1,13 +1,18 @@
 package fr.afpa.model;
 
 public class CompteDecouverte extends CompteUtilisateur {
-    private PlaylistFilms _playlistFilms = new PlaylistFilms();
+    private PlaylistFilms playlistFilms;
 
-    public PlaylistFilms get_playlistFilms() {
-        return _playlistFilms;
+    public CompteDecouverte(String nom, Long numeroCompte, PlaylistFilms playlistFilms) {
+        super(nom, numeroCompte);
+        this.playlistFilms = playlistFilms;
     }
 
-    public void set_playlistFilms(PlaylistFilms _playlistFilms) {
-        this._playlistFilms = _playlistFilms;
+    public PlaylistFilms getPlaylistFilms() {
+        return playlistFilms;
+    }
+
+    public void setPlaylistFilms(PlaylistFilms playlistFilms) {
+        this.playlistFilms = playlistFilms;
     }
 }

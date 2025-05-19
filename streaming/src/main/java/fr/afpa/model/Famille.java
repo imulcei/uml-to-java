@@ -1,14 +1,18 @@
 package fr.afpa.model;
 
 public class Famille {
-    private ComptePremium[] _comptePremiums = new ComptePremium[5];
+    private ComptePremium[] comptePremiums = new ComptePremium[5];
 
-    public ComptePremium[] get_comptePremiums() {
-        return _comptePremiums;
+    public Famille(ComptePremium[] comptePremiums) {
+        this.comptePremiums = comptePremiums;
     }
 
-    public void set_comptePremiums(ComptePremium[] _comptePremiums) {
-        this._comptePremiums = _comptePremiums;
+    public ComptePremium[] getComptePremiums() {
+        return comptePremiums;
+    }
+
+    public void setComptePremiums(ComptePremium[] comptePremiums) {
+        this.comptePremiums = comptePremiums;
     }
 
 }
